@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Antoine Dairon - Développeur Web - Toulouse</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =============================== [HEADER] ========================================= -->
+
+    <header class="header" id="haut">
+
+
+        <!-- ============ [NAVBAR] ================= -->
+        <nav class="navigation">
+            <div class="navbar">
+                <!-- logo géré en CSS -->
+                <a href="#haut" title="haut de page">
+                    <div class="logo">
+                        <div class="fond-logo"></div>
+                        <div class="logo-texte">
+                            <span class="white">A</span><span class="red">D</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Menu Burger -->
+                <div class="nav_button d-block d-lg-none">
+                    <i id="icon" class="fa fa-bars"></i>
+                </div>
+            </div>
+            <!-- liens dans un autre bloc pour les placer avec flexbox -->
+            <div id="menu" class="hidden">
+                <ul class="navbar_links">
+                    <li><a href="#prestations">Prestations</a></li>
+                    <li><a href="#realisations">Réalisations</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- div qui contiendra le contenu du header et pour le placer avec flexbox -->
+        <div class="header_container container">
+
+            <div class="header_content white">
+
+                <div class="title header_content-titles">
+                    <h1>Antoine <span class="red">Dairon</span></h1>
+                    <h2>Développeur Web <span class="black"> -</span> <span class="red">Toulouse</span></h2>
+                </div>
+
+                <div class="header_content-text">
+                    Bonjour. Je m’appelle Antoine, j’ai 36 ans et je suis
+                    développeur Web sur Toulouse et sa région. <br>
+                    <br>
+                    Je viens d’un univers assez différent du développement
+                    Web : celui des Ressources Humaines , univers dans
+                    lequel j’ai évolué pendant plus de 10 ans avant de décider
+                    de me consacrer à une (de mes) passions : le
+                    développement web !
+                    <br>
+                    Si vous voulez en savoir plus,
+                    n’hésitez pas à consulter la <a href="#faq"><span class="red">FAQ</span></a>.
+                    <br>
+                    <a href="#contact" class="btn">Me Contacter</a>
+                    <br>ou<br>
+                    <a href="CV/CV Antoine Dairon_2019-11.pdf" class="btn" target="_blank">Télécharger mon CV</a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- =============================== [PRESTATIONS] ========================================= -->
+    <section class="prestations" id="prestations">    
+
+        <h2 class="titre_section">Que Fais-je ?</h2>
+
+        <div class="container">
+            <div class="presta row justify-content-center align-items-center">
+                <figure class="presta_icone col-sm-12 col-md-6 col-lg-3">
+                    <img src="images/icones/flaticons/Versions_Portfolio/V3-layout.svg"
+                        alt="icone d'un ordinateur et d'un smartphone">
+                </figure>
+                <div class="presta_texte col-sm-12 col-md-6 col-lg-9">
+                    <h3 class="presta_titre">Web & <span class="red">Mobile</span></h3>
+                    <p>Un Développeur Web a plusieurs cordes à son arc et il existe de nombreuses façons de fabriquer un
+                        site web.
+                        Je peux créer votre site « de zéro » en partant d’une feuille blanche ou utiliser des CMS comme
+                        WordPress ou Prestashop pour votre projet e-commerce.
+                        Votre site sera adapté aux usages (et aux écrans) d’aujourd’hui : smartphones, tablettes ou
+                        desktop et respectera
+                        les standards d’accessibilité mais aussi de référencement pour vous assurer la meilleure des
+                        visibilités.</p>
+                </div>
+            </div>
+
+            <div class="presta row justify-content-center align-items-center">
+                <figure class="presta_icone presta-droite col-sm-12 col-md-6 col-lg-3">
+                    <img src="images/icones/flaticons/Versions_Portfolio/v2-pantone.svg"
+                        alt="icone d'un écran d'ordinateur avec nuancier de couleurs">
+                </figure>
+                <div class="presta_texte col-sm-12 col-md-6 col-lg-9">
+                    <h3 class="presta_titre">Conception & <span class="red">Design</span></h3>
+                    <p>Votre site internet ne ressemble à aucun autre, il reflète vos valeurs, votre personnalité,
+                        votre identité.
+                        Nous travaillerons ensemble pour définir vos besoins, vos envies, vos contraintes et objectifs
+                        pour construire le site qui vous ressemble.</p>
+                </div>
+            </div>
+
+            <div class="presta row justify-content-center align-items-center">
+                <figure class="presta_icone col-sm-12 col-md-6 col-lg-3">
+                    <img src="images/icones/flaticons/Versions_Portfolio/v2-html.svg"
+                        alt="icone d'un écran d'ordinateur sur internet">
+                </figure>
+                <div class="presta_texte col-sm-12 col-md-6 col-lg-9">
+                    <h3 class="presta_titre">Maintenance & <span class="red">Suivi</span></h3>
+                    <p>Votre site internet doit vivre, s’adapter à votre actualité, à votre identité visuelle et
+                        évoluer.
+                        Pour cela j’assurerai aussi le suivi et la mise à jour de votre site afin qu’il grandisse avec
+                        vous.
+                        Malheureusement, les bugs font (aussi) partie de la vie d’un site. Pour cela,
+                        je m’occuperai également de la maintenance et du dépannage afin que vous soyez toujours présent
+                        sur le web. </p>
+                </div>
+            </div>
+
+            <div class="button">
+                <a href="#contact" class="btn">Intéressé? Contactez moi</a>
+            </div>
+
+            <div class="aside row justify-content-center">
+                <p>
+                    J’utilise les dernières technologies et langages du web pour vous garantir
+                    un site moderne respectant les <span class="red">normes actuelles</span>.
+                </p>
+
+                <h3 class="red">Front-End</h3>
+
+                <div class="container row justify-content-center">
+                    <div class="aside_icone">
+                        <figure>
+                            <img src="images/Logos_WEB/PNG/HTML5_Logo.png" alt="logo HTML 5" class="logo_html">
+                        </figure>
+                    </div>
+                    <div class="aside_icone">
+                        <figure>
+                            <img src="images/Logos_WEB/PNG/CSS3_logo_and_wordmark.png" alt="logo CSS 3"
+                                class="logo_CSS">
+                        </figure>
+                    </div>
+                    <div class="aside_icone">
+                        <figure>
+                            <img src="images/Logos_WEB/PNG/javascript-seeklogo.com.png" alt="logo Javascript"
+                                class="logo_JS">
+                        </figure>
+                    </div>
+                </div>
+
+                <h3 class="red">Back-End</h3>
+
+                <div class="container row justify-content-center align-items-center">
+                    <div class="aside_icone">
+                        <figure>
+                            <img src="images/Logos_WEB/PNG/PHP-sans-fond.png" alt="logo PHP" id="logo_php">
+                        </figure>
+                    </div>
+                    <div class="aside_icone">
+                        <figure>
+                            <img src="images/Logos_WEB/PNG/MySQL-transparent.png" alt="Logo MYSQL">
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =============================== [RÉALISATIONS] ========================================= -->
+    <section class="realisations" id="realisations">
+        <h2 class="titre_section">Quelques Réalisations</h2>
+        <div class="reals container">
+
+            <!-- ========================= VIGNETTES DES RÉALISATIONS ========================= -->
+            <div class="vignettes row justify-content-center">
+                <!-- ajout d'un data-index pour faire le lien avec les tableau en JS -->
+                <figure class="vignette" data-index="0">
+                    <img src="images/Realisations/recadrees/Master_IRH_2008.png" class="img-fluid" alt="">
+                    <figcaption><i class="fa fa-plus"></i></figcaption>
+                </figure>
+
+                <figure class="vignette" data-index="1">
+                    <img src="images/Realisations/recadrees/lelephant.png" class="img-fluid" alt="">
+                    <figcaption><i class="fa fa-plus"></i></figcaption>
+                </figure>
+
+                <figure class="vignette" data-index="2">
+                    <img src="images/Realisations/recadrees/EDO.png" class="img-fluid" alt="" >
+                    <figcaption><i class="fa fa-plus"></i></figcaption>
+                </figure>
+
+                <figure class="vignette" data-index="3">
+                    <img src="images/Realisations/recadrees/Wild-Circus_2017.png" class="img-fluid" alt="">
+                    <figcaption><i class="fa fa-plus"></i></figcaption>
+                </figure>
+
+            </div>
+
+            <!-- ========================== DÉTAILS DES RÉALISATIONS =================================== -->
+            <!-- avec bootstrap : containers fluides responsives et row pour le placement flex et les col -->
+            <div class="vignette_detail container row">
+                <h3 class="col-12">Master Ingénierie des Ressources Humaines <br> Université Paris V</h3>
+                <figure>
+                    <img src="images/Realisations/recadrees/Master_IRH_2008.png" class="img-fluid" alt="">
+                </figure>
+                <div class="real_texte col-12">
+                    Refonte sur le fond et la forme du site du Master IRH de l'université Paris 5 Descartes (Promo 15 2007-2008).
+                </div>
+                <div class="button">
+                    <span class="btn btnFermer" data-index="0">fermer</span>
+                </div>
+            </div>
+
+            <div class="vignette_detail container row">
+                <h3 class="col-12">elePhant</h3>
+                <figure>
+                    <img src="images/Realisations/recadrees/lelephant.png" class="img-fluid" alt="">
+                </figure>
+                <div class="real_texte col-12">
+                    Gestion et mises à jour du site du groupe de musique elePhant de 2006 à 2010.
+                </div>
+                <div class="button">
+                    <span class="btn btnFermer" data-index="1">fermer</span>
+                </div>
+            </div>
+
+            <div class="vignette_detail container row">
+                <h3 class="col-12">Les Enfants de l'Ovale</h3>
+                <figure><img src="images/Realisations/recadrees/EDO.png" alt=""></figure>
+                <div class="real_texte col-12">
+                    Gestion du contenu du site de l'association des <a href="https://www.enfantsdelovale.org/" title="association Les Enfants de l'Ovale" target="_blank">enfants de l'ovale</a> en 2010.
+                </div>
+                <div class="button"><span class="btn btnFermer" data-index="2">fermer</span></div>
+            </div>
+
+            <div class="vignette_detail container row">
+                <h3 class="col-12">Wild Circus</h3>
+                <figure>
+                    <img src="images/Realisations/recadrees/Wild-Circus_2017.png" class="img-fluid" alt="">
+                </figure>
+                <div class="real_texte col-12">
+                    Projet de candidature Web : création d'un site internet sur le thème du cirque en 2017.
+                </div>
+                <div class="button">
+                    <span class="btn btnFermer" data-index="3">fermer</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button">
+            <a href="#prestations" class="btn">Découvrez mes prestations</a>
+        </div>
+
+    </section>
+    <!-- =============================== [FAQ] ========================================= -->
+    <section class="FAQ" id="faq">
+        <h2 class="titre_section">FAQ</h2>
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="icone_FAQ">
+                    <figure>
+                        <img src="images/icones/flaticons/Versions_Portfolio/v2-concept.svg"
+                            alt="icone d'un écran d'ordinateur avec nuancier de couleurs">
+                    </figure>
+                </div>
+                <div class="FAQ_content col-sm-12 col-md-12 col-lg-9">
+                    <div class="FAQ_item">
+                        <h3 class="FAQ_question">Quelle expérience avez-vous dans le <span class="red">développement Web</span> ?</h3>
+                        <p class="FAQ_answer">J’ai découvert le langage HTML au début des années 2000 lorsque j’ai dû personnaliser la page
+                            MySpace de mon groupe de musique et depuis, cette envie de « faire du web » et d’en apprendre toujours plus ne m’a
+                            pas quittée.
+                            J’ai eu ensuite l’occasion de créer et de gérer d’autres sites internets dans différents
+                            contextes : groupe
+                            de musique mais aussi le site internet de mon master, sites d’associations etc…</p>
+                    </div>
+                    <div class="FAQ_item">
+                        <h3 class="FAQ_question">Que faisiez-vous <span class="red">avant</span> de vous lancer dans les métiers du Web ?
+                        </h3>
+                        <p class="FAQ_answer">Avant de me lancer dans le développement web , j’ai eu la chance d’évoluer
+                            en RH dans des univers très variés : grands groupes industriels, banques-assurances, PME, start-up. Plus particulièrement, je
+                            me suis spécialisé dans la formation professionnelle. Et antérieurement à toutes ses expériences, j’ai
+                            étudié l’Ergonomie, la Psychologie et les Ressources Humaines.</p>
+                    </div>
+                    <div class="FAQ_item">
+                        <h3 class="FAQ_question">Pourquoi faire appel à <span class="red">vous</span> plutôt qu’à un développeur chevronné ?
+                        </h3>
+                        <p class="FAQ_answer">Il existe effectivement de nombreux développeurs web de qualité sur le
+                            marché.
+                            Je vous invite surtout à en rencontrer plusieurs et à choisir celui avec lequel vous vous sentirez le plus à l’aise
+                            car vous serez amenés à travailler ensemble.
+                            Chaque développeur est unique et apporte, en plus de ses compétences, sa personnalité dans
+                            ses projets. Étant au début de ma carrière, je m’investi pleinement, avec passion et envie dans
+                            mes projets.</p>
+                    </div>
+                    <div class="FAQ_item">
+                        <h3 class="FAQ_question">Qu’est-ce qui vous rend… « <span class="red">unique</span> » ?</h3>
+                        <p class="FAQ_answer">De part mes études j’ai pu développer un sens de l’écoute assez naturel.
+                            Mais aussi, de nombreuses années en tant que prestataire (RH et formation) ont forgé en moi
+                            un fort sens du service orienté client. J’ai l’habitude de travailler avec un client en mode projet
+                            pour le conseiller et l’accompagner dans la réalisation de ses objectifs.</p>
+                    </div>
+                    <div class="FAQ_item">
+                        <h3 class="FAQ_question"><span class="red">Comment</span> travaillez-vous ?</h3>
+                        <p class="FAQ_answer">En équipe avec vous tout simplement.
+                            Un développeur Web n’est pas aujourd’hui un ermite taciturne rivé à son ordinateur. Il se
+                            doit d’être à l’écoute de son client mais est aussi force de proposition et de conseil. Je n’envisage pas
+                            mes projets autrement qu’en lien étroit avec mes clients.</p>
+                    </div>
+                    <div class="FAQ_item">
+                        <h3 class="FAQ_question">On peut se rencontrer ? <span class="red">Échanger</span> ?</h3>
+                        <p class="FAQ_answer">Naturellement ! Je serai ravi d’échanger avec vous sur vos projets.
+                            N’hésitez pas à me contacter via le <a href="#contact">formulaire de contact</a> et nous pourrons nous rencontrer autour d’un café et, éventuellement, d’une
+                            chocolatine (vous dites pain au chocolat ? C’est pas grave, je viens de plus au Nord moi aussi…).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="linkedin">
+                Pour plus de détails sur mon parcours, vous pouvez consulter mon profil sur <br>
+                <a href="https://www.linkedin.com/in/antoine-dairon-8835457a/" title="Profil Linkedin Antoine Dairon"
+                    target="_blank">
+                    <img src="images/Logo_Linkedin.png" alt="logo Linkedin">
+                </a>
+            </div>
+            <div class="CV">
+                Vous pouvez également Télécharger mon CV : <br>
+                <a href="CV/CV Antoine Dairon_2019-11.pdf" class="btn" target="_blank">Télécharger mon CV</a>
+            </div>
+        </div>
+    </section>
+    <!-- =============================== [CONTACT] ========================================= -->
+    <section class="contact" id="contact">
+        <h2 class="titre_section">Me Contacter</h2>
+        <div class="container">
+            <form method="POST" action="">
+                <div class="row justify-content-center">
+                    <div class="contact_infos col-sm-12 col-md-12 col-lg-6">
+                        <input type="text" name="nom" class="nom" placeholder="Votre nom">
+                        <input type="text" name="prénom" class="prénom" placeholder="Votre prénom">
+                        <input type="email" name="email" id="email" class="email" placeholder="Votre email">
+                    </div>
+                    <div class="contact_message col-sm-12 col-md-12 col-lg-6">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre Message"></textarea>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" value="Envoyer" />
+                </div>
+            </form>
+
+
+        </div>
+    </section>
+
+    <!-- =============================== [FOOTER] ========================================= -->
+    <footer class="footer">
+        <div class="infos">
+            2019 - Antoine Dairon - Développeur Web - Région Toulousaine <br>
+            <hr>
+        </div>
+        <div class="credits">
+            <ul>
+                <li>Photo : <span class="italique">Designer’s Desk With Coffee And Wireframes</span> by Sarah Pflug</li>
+                <li>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
+                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></li>
+                <li> PHP logo by Levi Morrison </li>
+                <li>MySQL logo by <a href="https://www.cleanpng.com/users/@jocleyn.html" title="Jocleyn">Jocleyn</a> from 
+                    <a href="https://www.cleanpng.com/" title="cleanpng">cleanpng.com</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <!--========================================SCRIPT======================================= -->
+    <script src="JS/app.js"></script>
+</body>
+
+</html>

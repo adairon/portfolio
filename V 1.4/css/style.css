@@ -1,0 +1,640 @@
+/* Règles Générales */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+:root{
+    /* --color-red : #D70015 || rgb(215, 0, 21) */
+    --color-red : rgb(215, 0, 21);  /*si modif : modifier aussi couleur de fond navbar_links*/
+    --color-white : white;
+    --color-black : black;
+    --color-sombre : rgb(59, 73, 78);;
+}
+.red{
+    color: var(--color-red)
+}
+.white{
+    color: var(--color-white)
+}
+.black{
+    color : black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html,
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(231, 231, 231);
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    font-size: 3.5rem;
+    padding: 0;
+    line-height: 1;
+}
+
+
+h3{
+    font-size: 1.5rem;
+}
+
+/* Boutons call to action : */
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    width: 175px;
+    padding: 5px 25px;
+    border-radius: 50px;
+    border : 4px solid var(--color-red);
+    margin: 1rem 0;
+    background: var(--color-red);
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;    
+}
+.btn:hover{
+    border : 4px solid var(--color-sombre);
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--color-red);
+}
+
+/* Titres des sections : */
+.titre_section{
+    background-color: var(--color-sombre);
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    margin-bottom: 1rem;
+}
+
+/* pour éviter que le titre de la section soit masqué soit la barre de navigation :
+on ajoute un padding haut à la section visée de la taille de la barre de nav
+et on compense avec une marge négative pour éviter des espaces dans la page */
+section:target{
+    padding-top: 4.5rem;
+    margin-top: -4.5rem;
+}
+
+/* tous les div en row : */
+.row{
+    margin: 1rem auto;
+}
+
+/* ===================================================== [HEADER] ============================================================ */
+
+.header{
+    width: 100%;
+    /* hauteur minimum (ne peut pas être plus petit que): 100% de l'écran */
+    min-height: 100vh;
+    background-image: url(../images/OPAQUE2designers-desk-with-coffee-wireframes.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ==================== NAVBAR ========================== */
+
+.navigation{
+    /* barre de navigation fixe et tjs au dessus */
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.navbar{
+    width: 100%;
+    padding: 1rem 0;
+    height: 4.5rem;
+    background-color: var(--color-red);
+    border-bottom: 0.5px solid white;
+}
+/* Menu burger : */
+.nav_button{
+    color:white;
+    font-size: 2.6rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transform: translate(0, -0.6rem); /* pour décaler l'icone un peu vers le haut*/
+    transition: all .2s ease-out; 
+}
+
+.nav_button:active{
+    transform: rotate(-180deg);
+    transition: all .2s ease-out;
+
+}
+
+#menu{
+    z-index: 99;
+}
+
+.navbar_links{
+    width :100%;
+    /*-----------------------------A MODIFIER SI MODIF SUR --COLOR-RED------------------------------*/
+    /*couleur de fond en rgba pour appliquer une opacité*/
+    background-color: rgba(215, 0, 21, 0.8);                
+    /*---------------------------------------------------------------------------------------------*/
+    line-height: 5rem;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.navbar_links a{
+    padding-left :2rem;
+    text-decoration: none;
+    color: white;
+    line-height: 3rem;
+}
+
+.navbar_links a:hover{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+/* classes pour les actions JS */
+.hidden{
+    display: none;
+}
+
+
+/* ============ logo créé en CSS ==================*/
+.logo{
+    border: 1px solid black;
+    height:3.5rem;
+    width:3.5rem;
+    border-radius: 100%;
+    position: relative; /* position relative pour les lettres en absolue à l'intérieur du cercle*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    transform: translate(0, -1rem); /* pour décaler le logo un peu vers le haut*/
+    cursor: pointer;
+}
+
+/* fond du logo avec opacité : */
+.fond-logo{
+    height:3.5rem;
+    width:3.5rem;
+    border-radius:100%;
+    background: var(--color-sombre);
+    opacity: 0.90;
+}
+.logo-texte{
+    position:absolute;
+    margin: auto;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2.2rem;
+}
+/* =============== texte du header ================ */
+
+
+.header_content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+/* NE PAS placer le header_content en position absolue
+sinon il sort du flux et n'est pas décalé vers le bas 
+quand le menu burger se déroule */
+
+/* ajouter une petite ombre au texte pour le faire ressortir */
+.header_content-text:not(a){
+    text-shadow: 0px 0px 3px black;
+}
+/* enlever l'ombre aux liens dans le texte  */
+.header_content-text a{
+    text-shadow: 0px 0px 0px black;
+}
+
+
+
+
+
+/* ===================================================== [SECTION PRESTATION] ============================================================ */
+
+
+.presta{
+    height: auto; 
+    margin-bottom: 1rem;
+}
+
+.presta_titre{
+    color : black;
+    text-align: center;
+}
+.presta_icone {
+    margin: auto;
+    max-width: 200px;
+}
+
+.presta_icone img{
+    width: 200px;
+    margin:1rem auto;
+}
+
+.presta_texte{
+    margin: 1rem auto;
+    text-align: justify;
+}
+.aside{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.aside h3{
+    margin-top: 1rem;
+}
+
+.aside_icone figure img{
+    width: auto;
+    height: 150px;
+    margin: auto 1rem;
+}
+
+#logo_php{
+    width: 150px;
+    height: 75px;
+}
+
+/* ===================================================== [SECTION RÉALISATIONS] ============================================================ */
+.reals{
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+.vignette{
+    position: relative;
+    margin: 1rem;
+    cursor: pointer;
+    height: 200px;
+    width: 267px;
+    margin: 1rem;
+}
+
+
+.vignette img{
+    height: 200px;
+    width: 267px;
+    margin: auto ;
+    width: 100%;
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 20px;
+}
+
+.vignette figcaption{
+    display: flex;
+    margin: auto;
+    position: absolute;
+    top: 0;left: 0; 
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-red);
+    opacity: 0;
+    border-radius: 20px;
+    margin: 0 0;
+}
+
+.vignette>figcaption:hover{
+    opacity: .80;
+}
+
+.vignette figcaption .fa{
+    margin: auto;
+    color: white;
+    font-size: 4rem;
+}
+
+.vignette_detail{
+    /* : pour placer la vignette au centre de la page */
+    position: absolute;
+    top: 50%;left: 50%; 
+    transform: translate(-50%,-50%);
+    min-height: 500px;
+    max-width: 650px;
+    margin: auto;
+    padding: 1rem 0;
+    background-color: #fff;
+    justify-content: center;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px rgb(110, 110, 110);
+}
+.vignette_detail h3{
+    text-align: center;
+}
+
+.vignette_detail img{
+    max-height: 300px;
+    margin: auto ;
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 20px;
+}
+
+.real_texte{
+    text-align: center;
+}
+
+/* classe utilisée en JS */
+.invisible{
+    visibility: hidden;
+}
+
+.flou{
+    filter: blur(2px);
+    opacity: .5;
+}
+/* pour gérer la transition vers et depuis le flou ajouté par JS */
+.vignettes{
+    transition: all .2s ease-in-out; 
+}
+
+.btn_fermer{
+    line-height: 0;
+}
+
+/* ===================================================== [SECTION FAQ] ============================================================ */
+.FAQ_answer{
+    text-align: justify;
+}
+
+.FAQ_question{
+    text-align: center;
+}
+
+.icone_FAQ figure img{
+    width: 200px;
+}
+
+.FAQ_answer a
+{
+    color: var(--color-red);
+}
+
+.linkedin{
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.linkedin img{
+    width: 150px;
+    margin: 1rem auto;
+}
+
+.CV{
+    margin: 1rem auto;
+    text-align: center;
+}
+
+/* ===================================================== [SECTION CONTACT] ============================================================ */
+
+.contact_infos{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem auto;
+}
+
+.contact_infos input{
+    margin: auto;
+    width: 100%;
+    border-radius: 25px;
+    border: 1.5px solid var(--color-red);
+    padding: 1rem 0.2rem;
+}
+
+
+.contact_message{
+    height: 250px;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.contact_message textarea{
+    width: 100%;
+    height: 250px;
+    border-radius: 25px;
+    padding: 0.2rem 0.5rem;
+    border: 1.5px solid var(--color-red);
+}
+
+
+/* ===================================================== [FOOTER] ============================================================ */
+
+footer{
+    min-height: 20rem;
+    background-color: var(--color-sombre);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 ;
+}
+
+
+.footer .infos{
+    height: 2rem;
+    line-height: 2rem;
+    margin: 2rem auto; /*pour centrer le div dans le footer quand flex wrap*/
+}
+
+/* ligne horizontale :  */
+.infos>hr{
+    margin: auto;
+    height: .3px;
+    background-color: white;
+}
+
+.footer .credits{
+    margin: auto; /*pour centrer le div dans le footer quand flex wrap*/
+    font-size: 0.8rem;
+}
+
+.footer .credits a{
+    color: white;
+    text-decoration: underline;
+}
+
+.credits ul{
+    list-style: disc;
+}
+
+.italique{
+    font-style: italic;
+}
+
+
+/* =================================================== Media Query ===============================================
+================================================================================================================== */
+
+/* Mode desktop pour la section header. 
+les autres sections sont gérées en flexbox par la grille bootstrap */
+@media (min-width : 992px){
+    
+    /* pour que le menu soit visible en mode desktop : */
+    .hidden{
+        display: block;
+    }
+    
+    .navigation{
+        display: flex;
+        align-items: center;
+        height: 5rem;
+        /* pour gérer la transsition lors du passage à une barre de navigation plus petite */
+        transition: all .2s ease-out; 
+    }
+    /* basculement vers une barre de navigation plus petite géré par JS */
+    .nav-scroll{
+        height: 3.6rem;
+        background-color: var(--color-red);
+        border-bottom: 1px solid white;
+    }
+
+    /* pour éviter que le titre de la section soit masqué soit la barre de navigation :
+    on ajoute un padding haut à la section visée de la taille de la barre de nav
+    et on compense avec une marge négative pour éviter des espaces dans la page */
+    section:target{
+        padding-top: 3.6rem;
+        margin-top: -3.6rem;
+    }
+
+    .navbar{
+        height: 100%;
+        /* pour remplacer le fond rouge : */
+        background: none;
+        /* pour enlever la bordure basse : */
+        border-bottom: none;
+        /* pour centrer le logo : */
+        display: flex;
+        align-content: center;    
+    }
+    .logo{
+        transform: translate(0, 0); /*pour re-centrer le logo dans la navbar*/
+    }
+    
+    .navbar_links{
+        height: 100%;
+        /* pour remplacer le fond rouge : */
+        background: none;
+        width: auto;
+        display: flex;
+        font-size: 1rem;
+        margin: 0;
+        line-height: normal;
+        opacity: 1;
+    }
+
+    .navbar_links a{
+        padding :0 2rem;
+    }
+
+    .navbar_links li{
+        border-bottom: 0px solid white;
+    }
+
+    .header_container{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .header_content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 50%;
+        padding: 1rem;
+    }
+
+    /* sur grand écran, l'icone de la prestation ciblée passe à droite du texte */
+    .presta-droite{
+        order: 2;
+    }
+
+    .FAQ_question{
+        text-align: justify;
+    }
+
+}
+
+@media (min-width : 768px){
+    /* sur tablette, l'icone de la prestation ciblée passe à droite du texte 
+    en mode mobile, elle reste au dessus du texte*/
+    .presta-droite{
+        order: 2;
+    }
+}
+
+/* ================= BORDURES PROVISOIRES =================================== */
+/* div{
+    border: 1px dashed palevioletred;
+}
+.row{
+    border: 1px solid olive;
+}
+.navigation{
+    border: 3px dotted yellowgreen;
+}
+
+.header{
+    border: 1px solid black;
+}
+
+.navbar{
+    border: 1px solid yellowgreen;
+}
+
+.navbar_links{
+    border: 1px solid purple;
+}
+
+.header_container{
+    border: 2px dashed yellowgreen;
+}
+
+.header_content{
+    border: 1px solid dodgerblue;
+}
+
+.presta{
+    border: 1px solid maroon; border-radius: 20px;
+}
+.aside_icone figure{
+    border: 1px solid salmon;
+}
+
+.footer .infos{
+    border: 1px solid green;
+}
+
+.footer .credits{
+    border: 1px solid blue;
+} */

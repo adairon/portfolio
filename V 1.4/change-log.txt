@@ -1,0 +1,21 @@
+CSS:
+ajout d'une couleur variable sombre sur :
+ -les titres de section
+ -le footer
+ -les bordure de bouton au survol
+
+modifications du logo :
+ -graisse de police plus légère
+ -modification du fond en couleur sombre
+
+footer :
+ -plus grande hauteur
+ -agencement en colonne
+ - plus grande marge entre les div infos et crédits
+
+Graphisme :
+ -modification icone layout : ajout de la nouvelle couleur sombre à la place du noir dans le carré du milieu (illustration prestation "web & mobile"
+
+HTML :
+ -dans formulaire de contact : suppression de l'action traitement.php en l'absence du fichier pour ne pas ouvrir sur une page d'erreur
+ -icone prestation "web & mobile" : icone V3 avec nouvelle couleur sombre
