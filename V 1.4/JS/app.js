@@ -52,6 +52,7 @@ function auClic(){
         icone.classList.add('fa-bars');
     }
 };
+
 // fermer le menu au clic sur le logo :
 logo.addEventListener('click', clicLogo);
 function clicLogo(){
@@ -118,7 +119,7 @@ function scrollFunction() {
 /*
 pour afficher les détails des réalisations : 
     au clic sur le "+", un encart s'affiche et l'arrière plan devient flou et tous les autres encarts se ferment
-    au clic sur "fermer", l'encart disparait et l'arrière pla redevient net
+    au clic sur "fermer", l'encart disparait et l'arrière plan redevient net
 
     tous les passer en display none : au clic, on passe en display block
 */
@@ -131,7 +132,7 @@ const detail = document.querySelectorAll('.vignette_detail');
 const vignettes = document.querySelector('.vignettes');
 
 
-// boucle sur les détails pour les rendre invisibla e(par ajout d'une classe gérée en CSS)
+// boucle sur les détails pour les rendre invisibles (par ajout d'une classe gérée en CSS)
 for (d of detail) {d.classList.add('invisible')};
 
 // ajout d'un écouteur d'évènement sur les boutons + 

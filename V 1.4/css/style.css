@@ -273,6 +273,7 @@ quand le menu burger se déroule */
     margin: auto 1rem;
 }
 
+
 #logo_php{
     width: 150px;
     height: 75px;
@@ -474,6 +475,22 @@ footer{
     background-color: white;
 }
 
+.liens_sociaux{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+}
+
+.liens_sociaux a{
+    color:white;
+    text-decoration: none;
+}
+
+.fa{
+    font-size: 4rem;
+    margin: 0 2rem;
+}
+
 .footer .credits{
     margin: auto; /*pour centrer le div dans le footer quand flex wrap*/
     font-size: 0.8rem;
@@ -562,6 +579,7 @@ les autres sections sont gérées en flexbox par la grille bootstrap */
     }
 
     .header_container{
+        margin-top: 3rem;
         display: flex;
         justify-content: flex-end;
     }
