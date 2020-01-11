@@ -188,6 +188,7 @@ section:target{
     justify-content: center;
     align-items: center;
     margin-left: 1rem;
+    margin-top: .5rem;
     transform: translate(0, -1rem); /* pour décaler le logo un peu vers le haut*/
     cursor: pointer;
 }
@@ -258,6 +259,14 @@ quand le menu burger se déroule */
     margin: 1rem auto;
     text-align: justify;
 }
+/* logos webs : */
+
+/* lignes horizontales : */
+hr{
+    margin: auto;
+    width: 50%;
+}
+
 .aside{
     text-align: center;
     font-size: 1.5rem;
@@ -479,7 +488,9 @@ footer{
 .liens_sociaux{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content:center;
+    margin: 1rem auto;
 }
 
 .liens_sociaux a{
@@ -561,7 +572,10 @@ les autres sections sont gérées en flexbox par la grille bootstrap */
         align-content: center;    
     }
     .logo{
-        transform: translate(0, 0); /*pour re-centrer le logo dans la navbar*/
+        /*pour re-centrer le logo dans la navbar*/
+        transform: translate(0, 0); 
+        margin-top: 0;
+
     }
     
     .navbar_links{
